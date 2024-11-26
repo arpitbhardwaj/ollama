@@ -4,3 +4,7 @@ langchain
 langchain-core
 langchain-Ollama
 langchain_community
+langchain_text_splitters
+langchain_chroma
+duckduckgo_search
+wikipedia
