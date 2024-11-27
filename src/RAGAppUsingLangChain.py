@@ -7,7 +7,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 
-raw_documents = TextLoader("./LangchainRetrieval.txt").load()
+raw_documents = TextLoader("../resources/LangchainRetrieval.txt").load()
 #print(raw_documents)
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=300, chunk_overlap=20)
@@ -49,4 +49,5 @@ chain = (
     | StrOutputParser()
 )
 
-chain.invoke("What is text embedding and how does langchain help in doing it")
+msg = chain.invoke("What is text embedding and how does langchain help in doing it")
+print(msg)

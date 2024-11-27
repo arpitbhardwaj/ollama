@@ -22,4 +22,5 @@ print(ai_msg)
 
 chain = chat_template | llm | StrOutputParser()
 
-chain.invoke({"user_input": "Onomatopoeia"})
+chain_msg = chain.invoke({"user_input": "Onomatopoeia"})
+print(chain_msg)
